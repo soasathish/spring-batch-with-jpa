@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: uk.gov.iebr.drools.rule.template.HarmRuleTemplatesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.239 sec <<< FAILURE! - in uk.gov.iebr.drools.rule.template.HarmRuleTemplatesTest
+testSimpleTemplateWithDatabase(uk.gov.iebr.drools.rule.template.HarmRuleTemplatesTest)  Time elapsed: 0.239 sec  <<< ERROR!
+java.lang.IllegalStateException: Compilation errors were found. Check the logs.
+	at uk.gov.iebr.drools.rule.template.HarmRuleTemplatesTest.createKieSessionFromDRL(HarmRuleTemplatesTest.java:156)
+	at uk.gov.iebr.drools.rule.template.HarmRuleTemplatesTest.testSimpleTemplateWithDatabase(HarmRuleTemplatesTest.java:81)
+

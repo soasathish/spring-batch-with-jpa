@@ -1,0 +1,21 @@
+template header
+minScore
+maxScore
+previousCategory
+newCategory
+
+package ruletemplate.simple;
+
+import uk.gov.iebr.batch.model.Person	;
+
+template "removability-score-rules"
+
+rule "Categorize Persons_@{row.rowNumber}"
+no-loop true
+when
+    $c: Person(removabilityScore >= @{minScore}, removabilityScore <= @{maxScore}, removabilityCategory == Person.RemovabilityCategory.@{previousCategory})
+then
+    modify ($c){ setRemovabilityCategory(Person.RemovabilityCategory.@{newCategory})};
+end
+
+end template

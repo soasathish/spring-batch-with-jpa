@@ -1,0 +1,24 @@
+template header
+harm
+removability
+kow
+previousCategory
+newCategory
+
+package ruletemplate.complex;
+
+import uk.gov.iebr.batch.model.Person	;
+
+template "iebr-band-rules"
+
+rule "Categorize Persons_@{row.rowNumber}"
+no-loop true
+
+when
+    $c: Person(harmCategory == HarmCategory.@{harm} ,kowCategory == Person.KOWCategory.@{kow}, removabilityCategory == RemovabilityCategory.@{removability} , bands == Person.BANDS.@{previousCategory})
+then
+    modify ($c){ setBands(Person.BANDS.@{newCategory})};
+   
+end
+
+end template

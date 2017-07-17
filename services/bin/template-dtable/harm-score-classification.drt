@@ -1,0 +1,21 @@
+template header
+minScore
+maxScore
+previousCategory
+newCategory
+
+package ruletemplate.simple;
+
+import uk.gov.iebr.batch.model.input.Person	;
+
+template "harm-score-rules"
+
+rule "Categorize Persons_@{row.rowNumber}"
+no-loop true
+when
+    $c: Person(harmScore >= @{minScore}, harmScore <= @{maxScore}, harmCategory == Person.HarmCategory.@{previousCategory})
+then
+    modify ($c){ setHarmCategory(Person.HarmCategory.@{newCategory})};
+end
+
+end template

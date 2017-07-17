@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: uk.gov.iebr.drools.rule.template.RemovabilityRuleTemplatesTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.216 sec <<< FAILURE! - in uk.gov.iebr.drools.rule.template.RemovabilityRuleTemplatesTest
+testSimpleTemplateWithDatabase(uk.gov.iebr.drools.rule.template.RemovabilityRuleTemplatesTest)  Time elapsed: 0.216 sec  <<< ERROR!
+java.lang.IllegalStateException: Compilation errors were found. Check the logs.
+	at uk.gov.iebr.drools.rule.template.RemovabilityRuleTemplatesTest.createKieSessionFromDRL(RemovabilityRuleTemplatesTest.java:152)
+	at uk.gov.iebr.drools.rule.template.RemovabilityRuleTemplatesTest.testSimpleTemplateWithDatabase(RemovabilityRuleTemplatesTest.java:81)
+

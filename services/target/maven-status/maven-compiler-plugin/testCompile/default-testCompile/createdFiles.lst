@@ -1,0 +1,7 @@
+uk/gov/iebr/drools/rule/template/RuleRunnerTest.class
+uk/gov/iebr/drools/rule/template/BandTemplatesTest.class
+uk/gov/iebr/batch/IEBRFileProcessorApplicationTests.class
+uk/gov/iebr/drools/rule/template/HarmRuleTemplatesTest.class
+uk/gov/iebr/drools/rule/template/RemovabilityRuleTemplatesTest.class
+uk/gov/iebr/drools/rule/template/BandingRuleTest.class
+uk/gov/iebr/drools/rule/template/BaseTest.class

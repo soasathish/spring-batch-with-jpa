@@ -1,0 +1,17 @@
+package rules.simple;
+
+import uk.gov.iebr.batch.model.input.Person;
+
+rule "Person is LOW Harm"
+	when 
+		personObject: Person(harmCategory==HarmCategory.LOW)
+		 
+	then
+		personObject.setBands("OPT1");
+	end
+rule "Person is HIGH Harm"
+	when 
+		personObject: Person(harmCategory==HarmCategory.HIGH)
+	then
+		personObject.setBands("OPT2");
+	end

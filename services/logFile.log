@@ -1,0 +1,10 @@
+00:19:04.796 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e9ba398: startup date [Sun Jul 16 00:19:04 BST 2017]; root of context hierarchy
+00:19:05.146 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+00:19:05.307 [main] INFO  o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: org.postgresql.Driver
+00:19:05.392 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'allsparkEntityMF'
+00:19:06.392 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'allsparkEntityMF'
+01:11:13.666 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e9ba398: startup date [Sun Jul 16 01:11:13 BST 2017]; root of context hierarchy
+01:11:14.150 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+01:11:14.238 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceConfiguration': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [uk.gov.iebr.batch.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$febc561a]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	Invalid character constant
+

@@ -1,0 +1,21 @@
+template header
+minScore
+maxScore
+previousCategory
+newCategory
+
+package ruletemplate.complex;
+
+import uk.gov.iebr.batch.model.Person	;
+
+template "kow-score-rules"
+
+rule "Categorize Persons_@{row.rowNumber}"
+no-loop true
+when
+    $c: Person(kowScore >= @{minScore}, kowScore <= @{maxScore}, kowCategory == Person.KOWCategory.@{previousCategory})
+then
+    modify ($c){ setKowCategory(Person.KOWCategory.@{newCategory})};
+end
+
+end template
