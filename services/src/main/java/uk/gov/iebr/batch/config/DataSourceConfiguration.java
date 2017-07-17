@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @PropertySource({"classpath:application.properties"})
-@EnableJpaRepositories('uk.gov.iebr.batch.repository')
+@EnableJpaRepositories("uk.gov.iebr.batch.repository")
 @EnableTransactionManagement
 @ComponentScan(basePackages="uk.gov.iebr.batch.repository")
 public class DataSourceConfiguration {

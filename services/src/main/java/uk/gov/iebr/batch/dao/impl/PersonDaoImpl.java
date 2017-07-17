@@ -27,9 +27,10 @@ import uk.gov.iebr.batch.repository.PersonRepository;
 
 public class PersonDaoImpl  implements PersonDao {
 
+	
+	
 	@Autowired
 	DataSourceConfiguration dataSource;
-
 
 	@Autowired
 	PersonRepository personrepo;

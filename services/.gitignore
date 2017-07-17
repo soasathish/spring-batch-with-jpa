@@ -1,0 +1,56 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+
+######################
+# Directories
+######################
+/build/
+/bin/
+/target/
+
+######################
+# OS Files
+######################
+.DS_Store
+
+
+######################
+# project Misc Files
+######################
+*.log
+
+######################
+# Eclipse
+######################
+.project
+.metadata
+.classpath
+.factorypath
+.settings/
+
+
+### STS ###
+.metadata
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
+
