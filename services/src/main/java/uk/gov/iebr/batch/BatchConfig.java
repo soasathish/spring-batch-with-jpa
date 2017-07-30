@@ -9,28 +9,18 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.PropertySource;
 
-import uk.gov.iebr.batch.config.AllSparkDataSourceConfiguration;
 import uk.gov.iebr.batch.config.DataSourceConfiguration;
 import uk.gov.iebr.batch.dao.PersonDao;
 import uk.gov.iebr.batch.model.Person;
-import uk.gov.iebr.batch.step.Listener;
 import uk.gov.iebr.batch.step.Processor;
 import uk.gov.iebr.batch.step.Reader;
 import uk.gov.iebr.batch.step.Writer;
 
 @Configuration
 @EnableBatchProcessing
-//spring boot configuration
-@EnableAutoConfiguration
-//file that contains the properties
-@PropertySource("classpath:application.properties")
-@Import({DataSourceConfiguration.class, AllSparkDataSourceConfiguration.class})
 public class BatchConfig {
 
 	private static final Logger log = LoggerFactory.getLogger(BatchConfig.class);
@@ -61,6 +51,4 @@ public class BatchConfig {
 				.reader(Reader.reader("tram-data.csv"))
 				.processor(new Processor()).writer(new Writer(PersonDao)).build();
 	}
-	
-	
 }
