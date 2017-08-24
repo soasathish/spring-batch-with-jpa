@@ -2,20 +2,19 @@ package uk.gov.iebr.batch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import uk.gov.iebr.batch.config.DataSourceConfiguration;
+import uk.gov.iebr.batch.repository.PersonRepository;
 
 @SpringBootApplication
-@Profile(value = "${spring.profiles.active}")
-public class IEBRFileProcessorApplication extends SpringBootServletInitializer{
+public class IEBRFileProcessorApplication {
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(IEBRFileProcessorApplication.class);
-	}
-	
 	public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(DataSourceConfiguration.class);
+
+        PersonRepository repository = context.getBean(PersonRepository.class);
 		SpringApplication.run(IEBRFileProcessorApplication.class, args);
 	}
 }
